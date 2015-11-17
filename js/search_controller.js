@@ -1,6 +1,6 @@
 (function(bookStore) {
 
-  function SearchController($scope, bookService) {
+  function SearchController($scope, bookService, cartService) {
     this.scope = $scope;
     this.bookService = bookService;
     
@@ -10,7 +10,9 @@
     var self = this;
     $scope.getBooks = function() {
       self.loadBooks($scope.query);
-    }
+    };
+
+    $scope.cartService = cartService;
   };
 
   SearchController.prototype.loadBooks = function(query) {
@@ -20,7 +22,7 @@
     })
   };
 
-  bookStore.controller('SearchController', ['$scope', 'BookService', SearchController]);
+  bookStore.controller('SearchController', ['$scope', 'BookService', 'CartService', SearchController]);
 
-})(angular.module('book_store'));
+})(angular.module('BookStore'));
 

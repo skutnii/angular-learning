@@ -90,4 +90,4 @@
   bookStore.factory('BookService', ['$http', function($http) {
     return new BookService($http);
   }]);
-})(angular.module('book_store'));
+})(angular.module('BookStore'));

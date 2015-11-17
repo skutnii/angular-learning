@@ -9,7 +9,7 @@
       {{book.retailPrice.amount + " " + book.retailPrice.currencyCode}}
     </span>
 
-    <button class="add_to_cart">Add to cart</button>
+    <button class="add_to_cart" ng-click="cartService.add(book)">Add to cart</button>
   </p>
 
   <div class='book_description'>
