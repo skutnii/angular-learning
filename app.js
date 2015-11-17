@@ -1,1 +1,1 @@
-var bookStore = angular.module('book_store', []);
+angular.module('book_store', []);
