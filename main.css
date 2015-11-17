@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+}
+
+.cover {
+  float: left;
+  margin: 5px;
+}
+
+.book_description {
+  font-size: small;
+  max-width: 500px;
+}
+
+.book {
+  display: block;
+  overflow: hidden;
+}
+
+.authors {
+  font-size: small;
+}
+
+.sale_info {
+  font-size: small;
+}
+
+#search_view {
+  width: 50%;
+} 

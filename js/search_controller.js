@@ -1,7 +1,7 @@
 (function(bookStore) {
 
   function SearchController($scope, bookService) {
-    this.scope = scope;
+    this.scope = $scope;
     this.bookService = bookService;
     
     $scope.books = [];
@@ -9,7 +9,7 @@
 
     var self = this;
     $scope.getBooks = function() {
-      this.loadBooks($scope.query);
+      self.loadBooks($scope.query);
     }
   };
 

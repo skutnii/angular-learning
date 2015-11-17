@@ -1,0 +1,20 @@
+<div class='book'>
+  <h4>{{book.title}}</h4>
+
+  <p ng-if="angular.isDefined(book.authors)" class='authors'>{{ book.authors.join(', ') }}</p>
+
+  <p ng-if="book.saleable" class="sale_info">
+    
+    <span ng-if="angular.isDefined(book.retailPrice)" >
+      {{book.retailPrice.amount + " " + book.retailPrice.currencyCode}}
+    </span>
+
+    <button class="add_to_cart">Add to cart</button>
+  </p>
+
+  <div class='book_description'>
+    <img class='cover' ng-src="{{book.thumbnail}}" />
+    {{book.description}}
+  </div>
+
+</div>

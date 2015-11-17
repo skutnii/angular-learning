@@ -1,0 +1,7 @@
+<div ng-controller="SearchController">
+  <input type="text" placeholder="Find..." ng-model="query"></input>
+  <button ng-click="getBooks()">Go!</button>
+
+  <div ng-repeat="book in books" ng-include="'partials/book.html'">
+  </div>
+</div>

@@ -43,7 +43,7 @@
       if (typeof saleInfo != "undefined") {
         if (saleInfo.saleability == "FOR_SALE") {
           initOptions.saleable = true;
-          initOptions.retailPrice = saleInfo.retailPrice;
+          initOptions.retailPrice = data.retailPrice;
         }
       };
 
@@ -87,5 +87,7 @@
 
   BookService.prototype.constructor = BookService;
 
-  bookStore.factory('BookService', ['$http', BookService]);
+  bookStore.factory('BookService', ['$http', function($http) {
+    return new BookService($http);
+  }]);
 })(angular.module('book_store'));
