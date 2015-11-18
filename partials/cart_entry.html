@@ -1,9 +1,7 @@
 <div class="cart_entry">
   <h4>{{entry.book.title}}</h4>
   <div>
-    Cost: <input class="good_count" type="text" ng-model="entry.count" /> x {{entry.book.retailPrice.amount}} = {{entry.cost()}} 
-    <a class="plus-minus" href="#" ng-click="cartService.add(entry.book)">+</a> 
-    <a class="plus-minus" href="#" ng-click="cartService.remove(entry.book.id)">-</a> 
+    Cost: <input class="good_count" type="number" ng-model="entry.count" min="1"b integer/> x {{entry.book.retailPrice.amount}} = {{entry.cost()}} 
     <button ng-click="cartService.remove(entry.book.id, entry.count)">Remove</button>
   </div>
 </div>
