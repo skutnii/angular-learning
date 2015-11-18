@@ -3,14 +3,13 @@
 
   <p ng-if="angular.isDefined(book.authors)" class='authors'>{{ book.authors.join(', ') }}</p>
 
-  <p ng-if="book.saleable" class="sale_info">
-    
-    <span ng-if="angular.isDefined(book.retailPrice)" >
-      {{book.retailPrice.amount + " " + book.retailPrice.currencyCode}}
-    </span>
-
+  <div ng-if="showAddToCart(book)" class="sale_info">
+    {{book.retailPrice.amount + " " + book.retailPrice.currencyCode}}
     <button class="add_to_cart" ng-click="cartService.add(book)">Add to cart</button>
-  </p>
+  </div>
+  <div class="in_cart" ng-if="cartService.hasBook(book)">
+    IN CART
+  </div>
 
   <div class='book_description'>
     <img class='cover' ng-src="{{book.thumbnail}}" />

@@ -12,6 +12,10 @@
       self.loadBooks($scope.query);
     };
 
+    $scope.showAddToCart = function(book) {
+      return (book.saleable && (!cartService.hasBook(book)));
+    };
+
     $scope.cartService = cartService;
   };
 

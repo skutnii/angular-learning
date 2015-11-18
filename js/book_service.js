@@ -43,7 +43,7 @@
       if (typeof saleInfo != "undefined") {
         if (saleInfo.saleability == "FOR_SALE") {
           initOptions.saleable = true;
-          initOptions.retailPrice = data.retailPrice;
+          initOptions.retailPrice = saleInfo.retailPrice;
         }
       };
 

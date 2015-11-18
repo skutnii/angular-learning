@@ -25,6 +25,34 @@ body {
   font-size: small;
 }
 
-#search_view {
-  width: 50%;
+#search {
+  max-width: 50%;
+  float: left;
+  display: inline;
 } 
+
+#cart {
+  position: fixed;
+  width: 25%;
+  float: right;
+  display: inline;
+  font-size: small;
+  left:73%;
+  border-radius:5px;
+  border:2px solid;
+  border-color:#55aa55;
+  padding: 5px;
+}
+
+.plus-minus {
+  text-decoration: none;
+  font-size: 16pt;
+}
+
+.in_cart {
+  font-size: small;
+  background-color:#aaffaa;
+  padding: 3px;
+  border-radius: 3px;
+  max-width: 55px;
+}

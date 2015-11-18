@@ -1,0 +1,6 @@
+<div id= "cart" ng-controller="CartController">
+  <h3 id="cart_header">Cart</h3>
+  <p ng-show="cartService.isEmpty()">Your cart is empty</p>
+  <p ng-hide="cartService.isEmpty()">Total cost: {{cartService.totalCost()}}</p>
+  <div ng-repeat="(key, entry) in cartService.storage" ng-include="'partials/cart_entry.html'" />
+</div>
